@@ -6,7 +6,7 @@ Processing is done in following steps:
 
 - reads all paths from given directory, ignoring subdirectories and non-csv files
 - reads files by line in chunks and create stream of it
-- converts each line into (Reading)[./app/src/main/scala/sensors/reading.scala]. Reading is a trait with two subclasses representing ValidReading and InvalidReading
+- converts each line into [Reading](./app/src/main/scala/sensors/reading.scala). Reading is a trait with two subclasses representing ValidReading and InvalidReading
 - in next step, stream is 'folded' into accumulator which holds information about state of read data. It keeps track of origin paths and mapping between sensor nad sensor's observation. SensorObservation is simple case class with count of invalid/valid reads, total sum for calculating average and global min/max for given sensor
   Using accumulator makes stream space efficient because it depends only on number of sensors and not the number of files or measurements
 - last step creates Report based on accumulated raw statistics

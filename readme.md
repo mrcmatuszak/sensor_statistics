@@ -10,7 +10,7 @@ Processing is done in following steps:
 - in next step, stream is 'folded' into [Accumulator](./app/src/main/scala/sensors/sensors.scala) which holds information about state of read data. It keeps track of origin paths and mapping between sensor nad sensor's observation. [SensorObservation](./app/src/main/scala/sensors/sensors.scala) is simple case class with count of invalid/valid reads, total sum for calculating average and global min/max for given sensor.
 
   Using accumulator makes stream space efficient because it depends only on number of sensors and not the number of files or measurements
-- last step creates Report based on accumulated raw statistics
+- last step creates [Report](./app/src/main/scala/sensors/reporter.scala) based on accumulated raw statistics
 
 # Running
 

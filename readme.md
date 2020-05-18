@@ -31,9 +31,22 @@ Application expects path to directory holding csv files as first argument
 
 ```
   ./mill app.run /path/to/csv/
-
 ```
 
+Sample output
+
+```
+Num of processed files: 2
+Num of processed measurements: 4
+Num of failed measurements: 0
+
+Sensors with highest avg humidity:
+
+sensor-id,min,avg,max
+s3,10,10.0,10
+s1,3,3.0,3
+
+```
 
 
 ## Generate test data

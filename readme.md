@@ -66,9 +66,9 @@ Processing 5 files with 201053125 rows (231MB each) takes 60 seconds.
 
 # Improvements
 
-Although application is fulfilling requirements and can handle any number of arbitrary size files it can be still improve:
-- add better command line handling - at the moment it expects path to directory holding csv file
-- improve error handling, application will explode when line parsing fails due to different reason than conversion exception 
+Although application is fulfilling requirements and can handle any number of arbitrary size files it can still be improved by:
+- adding better command line handling - at the moment it expects path to directory holding csv file
+- improveing error handling, application will explode when line parsing fails due to different reason than conversion exception 
 - maybe go more functional: use lenses for updating state, define algebras and Tagless Final for encoding behavior
 
 
